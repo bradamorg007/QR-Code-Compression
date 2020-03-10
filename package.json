@@ -1,0 +1,19 @@
+{
+  "name": "qr-code-compression",
+  "version": "1.0.0",
+  "description": "Using Autoencoders to compress various sizes of QR codes",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bradamorg007/QR-Code-Compression.git"
+  },
+  "author": "Bradley Morgan & George Taylor",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bradamorg007/QR-Code-Compression/issues"
+  },
+  "homepage": "https://github.com/bradamorg007/QR-Code-Compression#readme"
+}
