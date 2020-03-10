@@ -1,8 +1,9 @@
 var fs = require('fs');
  
-const deleteFile = (file, isDelete=0) => {
+const deleteFile = ({file, isDelete}) => {
+    console.log(file)
     if(isDelete){
-        if (fs.existsSync(datasetDirectoryPath)){
+        if (fs.existsSync(file)){
             fs.unlinkSync(file)
         } else {
             throw new Error("No such file to delete")
@@ -27,6 +28,7 @@ const filePathChecker = (filepath) => {
 }
 
 const generateStrings = ({amount, stringLength, isGetReturn, isSave, savePath}) => {
+    //Default Values
     !amount ? amount=100: null;
     !stringLength ? stringLength = {len: 400, perc: 60} : null;
     !isGetReturn ? isGetReturn = false: null;
@@ -68,5 +70,6 @@ const generateStrings = ({amount, stringLength, isGetReturn, isSave, savePath}) 
 }
 
 const datasetDirectoryPath = './Dataset/randomStrings.txt';
+// deleteFile({file: datasetDirectoryPath, isDelete: true});
 
 generateStrings({amount: 100, stringLength: [{len: 400, perc: 60},{len: 200, perc: 10},{len: 600, perc: 30}], savePath: datasetDirectoryPath});
